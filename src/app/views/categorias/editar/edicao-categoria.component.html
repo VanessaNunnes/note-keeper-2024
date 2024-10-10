@@ -1,11 +1,11 @@
 <main class="container my-4">
   <div class="row justify-content-center g-3 mt-2">
     <div class="col-md-10 col-xxl-6">
-      <h1 class="fs-2">Cadastro de Categoria</h1>
+      <h1 class="fs-2">Edição de Categoria</h1>
 
       <hr />
 
-      <form [formGroup]="categoriaForm" (submit)="cadastrar()">
+      <form [formGroup]="categoriaForm" (submit)="editar()">
         <mat-form-field class="w-100" appearance="fill">
           <mat-label>Título da Categoria</mat-label>
           <input formControlName="titulo" matInput placeholder="Ex: Lazer" />

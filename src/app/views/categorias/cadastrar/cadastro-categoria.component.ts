@@ -4,9 +4,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { Router, RouterLink } from '@angular/router';
 import { CadastroCategoria } from '../models/categoria.models';
 import { CategoriaService } from '../services/categoria.service';
-import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-categoria',
@@ -23,18 +23,22 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class CadastroCategoriaComponent {
   categoriaForm: FormGroup;
+
   constructor(
     private router: Router,
     private categoriaService: CategoriaService
   ) {
     this.categoriaForm = new FormGroup({
-      titulo: new FormControl(''),
+      titulo: new FormControl<string>(''),
     });
   }
+
   cadastrar() {
-    const novaCategoria = this.categoriaForm.value as CadastroCategoria;
+    const novaCategoria: CadastroCategoria = this.categoriaForm.value;
+
     this.categoriaService.cadastrar(novaCategoria).subscribe((res) => {
-      console.log(`Categoria ID [${res.id}] cadastrada com sucesso!`);
+      console.log(`O registro ID [${res.id}] foi cadastrado com sucesso!`);
+
       this.router.navigate(['/categorias']);
     });
   }

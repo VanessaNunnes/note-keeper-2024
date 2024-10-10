@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListagemCategorias } from '../models/categoria.models';
+import { ListagemCategoria } from '../models/categoria.models';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,7 +17,7 @@ import { Observable } from 'rxjs';
   styleUrl: './listagem-categorias.component.scss'
 })
 export class ListagemCategoriasComponent implements OnInit {
-  categorias$?: Observable<ListagemCategorias[]>;
+  categorias$?: Observable<ListagemCategoria[]>;
 
   constructor(private categoriaService: CategoriaService){}
   ngOnInit(): void {
