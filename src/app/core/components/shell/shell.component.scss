@@ -6,12 +6,13 @@
   width: 250px;
 
   border-radius: 0;
-  background-color:#f5f7ff;
+  border: none;
+
+  background-color: #f5f7ff;
 }
 
 .sidenav .mat-toolbar {
-  //background: inherit;
-  background-color:#d7e3ff;
+  background-color: #d7e3ff;
   color: #005cbb;
 }
 
@@ -20,6 +21,6 @@
   top: 0;
   z-index: 1;
 
-  background-color:#d7e3ff;
+  background-color: #d7e3ff;
   color: #005cbb;
 }
