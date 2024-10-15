@@ -17,6 +17,12 @@
             placeholder="Ex: Lavar o cachorro"
           />
           <mat-icon matSuffix color="primary">title</mat-icon>
+          <mat-error *ngIf="titulo?.invalid && (titulo?.errors)!['required']"
+          >O titulo é obrigatório!</mat-error
+        >
+        <mat-error *ngIf="titulo?.invalid && (titulo?.errors)!['minlength']"
+          >O titulo precisa conter ao menos 3 caracteres!</mat-error
+        >
         </mat-form-field>
 
         <mat-form-field class="w-100" appearance="fill">
@@ -27,6 +33,12 @@
             placeholder="Ex: Lavar o cachorro"
           ></textarea>
           <mat-icon matSuffix color="primary">subtitles</mat-icon>
+          <mat-error *ngIf="conteudo?.invalid && (conteudo?.errors)!['required']"
+            >O conteudo é obrigatório!</mat-error
+          >
+          <mat-error *ngIf="conteudo?.invalid && (conteudo?.errors)!['minlength']"
+            >O conteudo precisa conter ao menos 3 caracteres!</mat-error
+          >
         </mat-form-field>
 
         <mat-form-field class="w-100" appearance="fill">
@@ -39,6 +51,9 @@
             >
           </mat-select>
           <mat-icon matSuffix color="primary">bookmark</mat-icon>
+          <mat-error *ngIf="categoriaId?.invalid && (categoriaId?.errors)!['required']"
+          >A categoria é obrigatória!</mat-error
+        >
         </mat-form-field>
 
         <div class="row justify-content-end g-2 mt-2">
