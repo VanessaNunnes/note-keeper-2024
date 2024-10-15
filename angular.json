@@ -130,7 +130,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://VanessaNunnes.github.io/note-keeper-2024",
+            "baseHref": "https://VanessaNunnes.github.io/note-keeper-2024/",
             "repo": "https://github.com/VanessaNunnes/note-keeper-2024.git"
           }
         }
